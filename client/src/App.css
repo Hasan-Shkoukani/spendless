@@ -1,0 +1,259 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* prevents sideways scrolling */
+}
+
+:root {
+    --primary: rgb(21, 21, 21);
+    --secondary: #2b8648;
+    --accent: #3ca265;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--primary);
+    color: var(--white);
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+header {
+    background-color: var(--secondary);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding-left: 2vw;
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    height: 8vh;
+    width: 9vw;
+}
+
+.logo-pic {
+    height: 100%;
+    width: 100%;
+}
+
+.s1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg {
+    opacity: 30%;
+    height: 40vh;
+    width: 100%;
+}
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bg-text {
+    position: absolute;
+    bottom: 3vh;
+    text-align: center;
+}
+
+.bg-text button {
+    background-color: transparent;
+    font-size: 1.8vw;
+    color: var(--white);
+    font-weight: bold;
+    border: none;
+    padding: 1vh 2vw;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s, transform 0.3s;
+}
+
+.bg-text button:hover {
+    transform: scale(1.05);
+}
+
+.features-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 6vh;
+    min-height: 50vh;
+    padding: 4vh 4vw 10vh 4vw;
+    border-top: solid var(--secondary) 2px;
+    border-bottom: solid var(--secondary) 2px;
+}
+
+.features-header {
+    font-size: 2vw;
+    font-weight: bold;
+    border-top: 2px solid var(--secondary);
+    border-bottom: 2px solid var(--secondary);
+    padding-block: 0.8vh;
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    gap: 3vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.feature-icon {
+    display: grid;
+    width: 30vw;
+    max-width: 250px;
+    height: 30vh;
+    background-color: #f2f2f2;
+    grid-template-rows: 70% 30%;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.feature-icon div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-icon img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.f-text {
+    color: var(--white);
+    background-color: var(--secondary);
+    font-size: 1vw;
+    font-weight: bold;
+    height: 100%;
+}
+
+.footer {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 1.5vh 0;
+    text-align: center;
+    border-top: 2px solid #1b5e35;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin-bottom: 1vh;
+    flex-wrap: wrap;
+}
+
+.footer-content a {
+    color: var(--white);
+    font-size: 1.8vw;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-content a:hover {
+    color: #c7f5da;
+    transform: scale(1.2);
+}
+
+.footer-text {
+    font-size: 1vw;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 80px;
+        height: 50px;
+    }
+
+    .bg-text button {
+        font-size: 4vw;
+    }
+
+    .features-header {
+        font-size: 4vw;
+    }
+
+    .f-text {
+        font-size: 3vw;
+    }
+
+    .feature-icon {
+        width: 80vw;
+        height: 250px;
+    }
+
+    .footer-content a {
+        font-size: 4vw;
+    }
+
+    .footer-text {
+        font-size: 2.5vw;
+    }
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Prevent scrolling when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Optional: Add smooth transitions */
+.features .feature-icon {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.features .feature-icon:hover {
+  transform: scale(1.05);
+}
+
