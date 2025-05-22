@@ -1,6 +1,6 @@
-# 🧠 PlanToBudget
+# 🧠 SPENDLESS
 
-**PlanToBudget** is a smart assistant web app that helps users generate realistic shopping/meal plans based on a budget **OR** estimate the total cost of a plan they've already made. It uses **Google Gemini AI** to intelligently handle budget estimation and plan generation.
+**SPENDLESS** is a smart assistant web app that helps users generate realistic shopping/meal plans based on a budget **OR** estimate the total cost of a plan they've already made. It uses **Google Gemini AI** to intelligently handle budget estimation and plan generation.
 
 ---
 
