@@ -13,6 +13,7 @@ router.post('/btp', async (req, res) => {
                   HIGHLIGHT THE OVERALL PRICE AT THE BEGINNING
                   Plan details:
                   ${plan}
+                  DO NOT ANSWER ANYTHING OUT OF THE CONTEXT OF THIS PROMPT
                   `;
 
     const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`, {

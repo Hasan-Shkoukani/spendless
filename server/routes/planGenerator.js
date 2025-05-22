@@ -17,6 +17,7 @@ router.post('/generate', async (req, res) => {
                   - Include cleaning supplies and other necessary items.
 
                   YOU MUST STICK TO THE BUDGET, IF IT IS NOT POSSIBLE, MENTION IT AND GIVE THE CLOSEST PLAN ( PLUS MINUS 5 DOLLAR MARGIN ONLY )
+                  DO NOT ANSWER ANYTHING OUT OF THE CONTEXT OF THIS PROMPT
                   `;
 
     const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`, {
